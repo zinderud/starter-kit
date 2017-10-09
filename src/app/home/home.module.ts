@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatToolbarModule, MatCardModule } from '@angular/material';
 import { TranslateModule } from '@ngx-translate/core';
 
 import { CoreModule } from '../core/core.module';
@@ -14,7 +16,10 @@ import { QuoteService } from './quote.service';
     TranslateModule,
     CoreModule,
     SharedModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    FlexLayoutModule,
+    MatToolbarModule,
+    MatCardModule
   ],
   declarations: [
     HomeComponent

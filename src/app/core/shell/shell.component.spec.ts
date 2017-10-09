@@ -6,7 +6,6 @@ import { AuthenticationService } from '../authentication/authentication.service'
 import { MockAuthenticationService } from '../authentication/authentication.service.mock';
 import { ShellComponent } from './shell.component';
 import { CoreModule } from '../core.module';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 describe('ShellComponent', () => {
   let component: ShellComponent;
@@ -17,7 +16,6 @@ describe('ShellComponent', () => {
       imports: [
         RouterTestingModule,
         TranslateModule.forRoot(),
-        NgbModule.forRoot(),
         CoreModule
       ],
       providers: [

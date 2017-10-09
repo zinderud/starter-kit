@@ -2,8 +2,9 @@ import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HttpModule, Http, XHRBackend, ConnectionBackend, RequestOptions } from '@angular/http';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatSidenavModule, MatListModule, MatButtonModule, MatIconModule } from '@angular/material';
 import { TranslateModule } from '@ngx-translate/core';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { ShellComponent } from './shell/shell.component';
 import { HeaderComponent } from './shell/header/header.component';
@@ -24,8 +25,12 @@ export function createHttpService(backend: ConnectionBackend,
     CommonModule,
     HttpModule,
     TranslateModule,
-    NgbModule,
-    RouterModule
+    RouterModule,
+    FlexLayoutModule,
+    MatSidenavModule,
+    MatListModule,
+    MatButtonModule,
+    MatIconModule
   ],
   declarations: [
     HeaderComponent,

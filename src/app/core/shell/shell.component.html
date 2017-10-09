@@ -1,2 +1,24 @@
-<app-header></app-header>
-<router-outlet></router-outlet>
+<div fxFlex>
+  <mat-sidenav-container fxFill>
+    <mat-sidenav mode="side" opened="true">
+      <div class="profile">
+        <mat-icon>person</mat-icon>
+        <div>
+          <button mat-button translate>User</button>
+        </div>
+      </div>
+      <nav>
+        <mat-list>
+          <mat-divider></mat-divider>
+          <a mat-list-item routerLink="/home" routerLinkActive="active" translate>Home</a>
+          <mat-divider></mat-divider>
+          <a mat-list-item routerLink="/about" routerLinkActive="active" translate>About</a>
+          <mat-divider></mat-divider>
+        </mat-list>
+      </nav>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
