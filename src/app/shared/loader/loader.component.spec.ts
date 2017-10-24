@@ -1,8 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { LoaderComponent } from './loader.component';
-import { MaterialModule } from './../../material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
+import { MaterialModule } from '../../material.module';
+import { LoaderComponent } from './loader.component';
 
 describe('LoaderComponent', () => {
   let component: LoaderComponent;
@@ -11,8 +12,9 @@ describe('LoaderComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
         imports: [
-          MaterialModule,
-          BrowserAnimationsModule
+          BrowserAnimationsModule,
+          FlexLayoutModule,
+          MaterialModule
         ],
         declarations: [LoaderComponent]
       })

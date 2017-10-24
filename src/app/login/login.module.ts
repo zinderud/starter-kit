@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
-import { FlexLayoutModule } from '@angular/flex-layout';
 import { TranslateModule } from '@ngx-translate/core';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { MaterialModule } from '../material.module';
 import { SharedModule } from '../shared/shared.module';
@@ -14,9 +14,9 @@ import { LoginComponent } from './login.component';
     CommonModule,
     ReactiveFormsModule,
     TranslateModule,
+    SharedModule,
     FlexLayoutModule,
     MaterialModule,
-    SharedModule,
     LoginRoutingModule
   ],
   declarations: [

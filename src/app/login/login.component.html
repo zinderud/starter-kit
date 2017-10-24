@@ -7,7 +7,7 @@
         <button mat-raised-button color="primary" [matMenuTriggerFor]="languageMenu">
           {{currentLanguage}}
         </button>
-        <mat-menu #languageMenu="matMenu">
+        <mat-menu #languageMenu>
           <button mat-menu-item *ngFor="let language of languages" (click)="setLanguage(language)">
             {{language}}
           </button>
