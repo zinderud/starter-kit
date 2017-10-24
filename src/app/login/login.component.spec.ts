@@ -2,7 +2,9 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { TranslateModule } from '@ngx-translate/core';
 import { RouterTestingModule } from '@angular/router/testing';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { MaterialModule } from '../material.module';
 import { CoreModule } from '../core/core.module';
 import { LoginComponent } from './login.component';
 
@@ -13,6 +15,8 @@ describe('LoginComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
+        MaterialModule,
+        BrowserAnimationsModule,
         RouterTestingModule,
         TranslateModule.forRoot(),
         ReactiveFormsModule,

@@ -3,11 +3,10 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HttpModule, Http, XHRBackend, ConnectionBackend, RequestOptions } from '@angular/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatSidenavModule, MatListModule, MatButtonModule, MatIconModule } from '@angular/material';
 import { TranslateModule } from '@ngx-translate/core';
 
+import { MaterialModule } from '../material.module';
 import { ShellComponent } from './shell/shell.component';
-import { HeaderComponent } from './shell/header/header.component';
 import { AuthenticationService } from './authentication/authentication.service';
 import { AuthenticationGuard } from './authentication/authentication.guard';
 import { I18nService } from './i18n.service';
@@ -25,15 +24,11 @@ export function createHttpService(backend: ConnectionBackend,
     CommonModule,
     HttpModule,
     TranslateModule,
-    RouterModule,
     FlexLayoutModule,
-    MatSidenavModule,
-    MatListModule,
-    MatButtonModule,
-    MatIconModule
+    MaterialModule,
+    RouterModule
   ],
   declarations: [
-    HeaderComponent,
     ShellComponent
   ],
   providers: [

@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LoaderComponent } from './loader.component';
+import { MaterialModule } from './../../material.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('LoaderComponent', () => {
   let component: LoaderComponent;
@@ -8,6 +10,10 @@ describe('LoaderComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+        imports: [
+          MaterialModule,
+          BrowserAnimationsModule
+        ],
         declarations: [LoaderComponent]
       })
       .compileComponents();
@@ -61,19 +67,5 @@ describe('LoaderComponent', () => {
 
     // Assert
     expect(span.innerText).toBe('testing');
-  });
-
-  it('should display a bigger spinner', () => {
-    // Arrange
-    const element = fixture.nativeElement;
-    const spinner = element.querySelectorAll('mat-progress-spinner')[0];
-
-    // Act
-    fixture.componentInstance.size = 2;
-    fixture.detectChanges();
-
-    // Assert
-    expect(spinner.style.width).toBe(64);
-    expect(spinner.style.height).toBe(64);
   });
 });
